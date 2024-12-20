@@ -1,0 +1,11 @@
+date,expenses,expenses description,income,income description
+2024-01-01,100,"Groceries",500,"Salary"
+2024-01-02,50,"Transport",0,""
+2024-01-03,200,"Shopping",0,""
+2024-01-04,0,"",1000,"Freelance Work"
+2024-01-05,75,"Dining Out",0,""
+2024-01-06,0,"",250,"Gift"
+2024-01-07,300,"Rent",0,""
+2024-01-08,25,"Snacks",0,""
+2024-01-09,50,"Utilities",0,""
+2024-01-10,0,"",700,"Part-Time Job"

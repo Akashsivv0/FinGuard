@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Advice Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='aipg.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Generate Financial Advice</h1>
+        <p class="description">Upload your CSV file to get personalized financial advice based on your income and expenses data.</p>
+
+        <!-- Form for CSV Upload -->
+        <form action="{{ url_for('generate_advice') }}" method="POST" enctype="multipart/form-data">
+            <label for="file" class="file-label">Upload CSV File</label>
+            <input type="file" name="file" id="file" accept=".csv" required>
+            <button type="submit" class="submit-button">Get Advice</button>
+        </form>
+
+        <!-- Displaying AI-generated Advice -->
+        {% if advice %}
+            <div class="advice-section">
+                <h2>Here’s your financial advice:</h2>
+                <p>{{ advice }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

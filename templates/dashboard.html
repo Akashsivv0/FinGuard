@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mainfinstyle.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dashboard</h1>
+            <nav>
+                <a href="{{ url_for('health') }}" class="btn">Financial Health score</a>
+                <a href="{{ url_for('generate_advice') }}" class="btn">Ask AI for Advice</a>
+                <a href="{{ url_for('logout') }}" class="btn logout">Logout</a>
+
+        </header>
+        <main>
+            <form action="{{ url_for('dashboard') }}" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="file">Upload a CSV File:</label>
+                    <input type="file" id="file" name="file" required>
+                </div>
+                <button type="submit" class="btn submit">Upload</button>
+            </form>
+
+            {% if summary %}
+            <div class="summary-section">
+                <h2>Data Summary</h2>
+                <ul>
+                    {% for key, value in summary.items() %}
+                    <li><strong>{{ key }}:</strong> {{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if graph %}
+            <div class="graph-section">
+                <h2>Graph</h2>
+                <img src="data:image/png;base64,{{ graph }}" alt="Graph">
+            </div>
+            {% endif %}
+        </main>
+        <footer>
+            <p>&copy; 2024 Finguard. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+

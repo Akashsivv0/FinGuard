@@ -1,0 +1,92 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Upload Form */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.upload-form input {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.upload-form button {
+    padding: 10px 20px;
+    background-color: #0b8a2b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-form button:hover {
+    background-color: #097d24;
+}
+
+/* Health Score Section */
+.health-score {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.health-score h2 {
+    color: #0b8a2b;
+    font-size: 2em;
+}
+
+/* Donut Chart */
+.donut-chart {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Advice Section */
+.advice {
+    margin-top: 30px;
+}
+
+.advice h3 {
+    color: #333;
+}
+
+.advice ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.advice li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+

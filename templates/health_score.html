@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Health Score</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='healstyles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Financial Health Score</h1>
+
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="file" accept=".csv" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if health_score %}
+        <div class="health-score">
+            <h2>Your Health Score: {{ health_score }}%</h2>
+        </div>
+
+        <div class="donut-chart">
+            <img src="data:image/png;base64,{{ graph }}" alt="Health Score Donut Chart">
+        </div>
+
+        <div class="advice">
+            <h3>Advice for Improvement:</h3>
+            <ul>
+                {% for item in advice %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+

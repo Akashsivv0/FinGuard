@@ -1,0 +1,88 @@
+/* General styling for the page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    font-size: 2em;
+    color: #4CAF50;
+    text-align: center;
+}
+
+.description {
+    font-size: 1.1em;
+    text-align: center;
+    margin: 15px 0;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.file-label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.advice-section {
+    margin-top: 30px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.advice-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+.advice-section p {
+    font-size: 1.1em;
+    color: #555;
+}
