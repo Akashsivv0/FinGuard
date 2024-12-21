@@ -15,7 +15,7 @@ app = Flask(__name__)
 app.secret_key = "app_key"
 
 # Database configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://db_username:password@localhost/db_name'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://db_username:password@localhost/db_name'#replace with your own credentials.
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
 
